@@ -1,0 +1,3 @@
+
+class WrongModelFormatException(Exception):
+    pass

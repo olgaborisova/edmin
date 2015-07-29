@@ -1,0 +1,25 @@
+<!DOCTYPE html>{% load staticfiles %}
+<html lang="en">
+<head>
+  <title>Edmin test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="container">{% csrf_token %}
+    {% block content %}{% endblock %}
+  <script>
+    var require = {
+        baseUrl: "scripts"
+    };
+  </script>
+
+  <script type="text/javascript" data-main="{% static 'js/main.js' %}" src="{% static 'js/libs/require.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/libs/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/csrf.js' %}"></script>
+
+  {% block script %}
+  {% endblock %}
+</body>
+</html>
