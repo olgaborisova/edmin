@@ -7,8 +7,6 @@ from .exceptions import WrongModelFormatException
 from .settings import MODELS
 
 
-__all__ = ['models']
-
 app_label = 'storage'
 
 
